@@ -1,0 +1,42 @@
+
+{{define "base"}}
+<head>
+  <title>3D Dungeons</title>
+  <link href="/static/css/main_style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="/static/js/mapper.js"></script>
+</head>
+<body>
+  <div id="loading">
+    <div class="big">Loading...</div>
+    <div>
+      <p> Keyboard commands!</p>
+      <br />
+      <p><strong>LEFT, UP, RIGHT </strong>— Highlight the left, top, or right face of the cube. Or, move the cursor one unit in the highlit direction.</p>
+      <p><strong>DOWN </strong>— Move the cursor one unit opposite the highlit direction.</p>
+      <p><strong>0 </strong>— Return the cursor to the origin.</p>
+      <p><strong>d </strong>— Delete the highlit tile.</p>
+      <br />
+      <p><strong>CLICK</strong> a tile in the palette to the left to drop it on the map.</p>
+    </div>
+  </div>
+  <div id="palette-container">
+    <div id="palette"></div>
+  </div>
+  <canvas id="map-view"></canvas>
+  <script type="text/javascript">
+    geo.map = new geo.Mapper(
+      document.querySelector("#map-view"),
+      document.querySelector("#palette"));
+    document.body.onkeydown = function(evt) {
+      geo.map.handleKey(evt.keyCode);
+    };
+    //geo.map.loadTileset("stonewerks", true, true);
+    //geo.map.loadTileset("rorschachhamster", true, true);
+    //geo.map.loadTileset("davidmillar", true, true);
+    geo.map.loadTileset("dysonlogos", true, true);
+    //geo.map.loadTileset("risusmonkey", false, true);
+    //geo.map.loadTileset("glennjupp", true, false);
+    //geo.map.loadTileset("marcmajcher", true, false);
+  </script>
+</body>
+{{end}}

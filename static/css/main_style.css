@@ -1,0 +1,60 @@
+body {
+  margin: 0px;
+}
+
+#loading {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.big {
+  line-height: 280px;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+#map-view {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+#palette-container {
+  max-height: 100%;
+  width: 100px;
+}
+
+#palette {
+  max-height: 100%;
+  overflow: auto;
+  margin-left: -90px;
+  transition: 0.1s;
+}
+
+#palette-container:hover #palette {
+  transition: 0.1s;
+  margin-left: 0px;
+}
+
+#palette > img {
+  cursor: pointer;
+  display: block;
+  width: 100px;
+  height: 100px;
+  opacity: 0.4;
+}
+
+#palette > img:hover {
+  opacity: 1;
+}
