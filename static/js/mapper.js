@@ -3,6 +3,7 @@
  * Author: Jeff Schecter (jeffrey.schecter@gmail.com)
  */
 
+// Constants & arbitrary stringy trash go here.
 var geo = {
   map: null,
   TILE_SIZE: 300,
@@ -19,6 +20,7 @@ var geo = {
     CURSOR: "rgba(0, 0, 255, 0.2)",
     CURSOR_LIGHT: "rgba(0, 0, 255, 0.1)",
   },
+
   CURSOR: "CURSOR",
   CURSOR_LIGHT: "CURSOR_LIGHT",
   HIGHLIGHT: "HIGHLIGHT",
