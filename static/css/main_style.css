@@ -38,7 +38,7 @@ body {
 #palette {
   max-height: 100%;
   overflow: auto;
-  margin-left: -90px;
+  margin-left: -85px;
   transition: 0.1s;
 }
 
